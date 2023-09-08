@@ -66,7 +66,16 @@ app.get('/bfhl', (req, res) => {
     res.json(response);
     } else {
       // No data in req.body
-      res.json({Error: "Data Not Found"})
+      const response = {
+        is_success: false,
+        user_id: 'john_doe_17091999',
+        email: 'john@xyz.com',
+        roll_number: 'ABCD123',
+        numbers: [],
+        alphabets: [],
+        highest_alphabet: [],
+      };
+      res.json(response);
     }
   });
 
