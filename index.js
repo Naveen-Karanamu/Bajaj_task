@@ -59,26 +59,26 @@ app.get('/bfhl', (req, res) => {
         }
     
         const response = {
-          is_success: true,
-          user_id: 'john_doe_17091999',
-          email: 'john@xyz.com',
-          roll_number: 'ABCD123',
-          numbers: numbers,
-          alphabets: alphabets,
-          highest_alphabet: highest_alphabet,
-        };
+            is_success: true,
+            user_id: req.body.user_id,
+            email: req.body.email,
+            roll_number: req.body.roll_number,
+            numbers: numbers,
+            alphabets: alphabets,
+            highest_alphabet: highest_alphabet,
+          };
     
         res.json(response);
     } else {
       // No data in req.body
       const response = {
-        is_success: false,
-        user_id: 'john_doe_17091999',
-        email: 'john@xyz.com',
-        roll_number: 'ABCD123',
-        numbers: [],
-        alphabets: [],
-        highest_alphabet: [],
+        is_success: true,
+        user_id: req.body.user_id,
+        email: req.body.email,
+        roll_number: req.body.roll_number,
+        numbers: numbers,
+        alphabets: alphabets,
+        highest_alphabet: highest_alphabet,
       };
       res.json(response);
     }
