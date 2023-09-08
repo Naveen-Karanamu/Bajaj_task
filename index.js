@@ -72,13 +72,13 @@ app.get('/bfhl', (req, res) => {
     } else {
       // No data in req.body
       const response = {
-        is_success: true,
-        user_id: req.body.user_id,
-        email: req.body.email,
-        roll_number: req.body.roll_number,
-        numbers: numbers,
-        alphabets: alphabets,
-        highest_alphabet: highest_alphabet,
+        is_success: false,
+        user_id: "",
+        email: "",
+        roll_number: "",
+        numbers: [],
+        alphabets: [],
+        highest_alphabet: [],
       };
       res.json(response);
     }
